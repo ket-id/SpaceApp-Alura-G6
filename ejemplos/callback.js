@@ -1,39 +1,36 @@
-function uno (dos) {
+function uno(dos) {
     console.log("uno")
     setTimeout(dos, 2000)
-  
+
 }
 
-function dos (tres) {
+function dos(tres) {
     console.log("dos")
-    setTimeout(tres,2000)
+    setTimeout(tres, 2000)
 }
 
-function tres (cuatro) {
+function tres(cuatro) {
     console.log("tres")
-    setTimeout(cuatro,2000)
+    setTimeout(cuatro, 2000)
 
 }
 
-function cuatro (cinco) {
+function cuatro(cinco) {
     console.log("cuatro")
-    setTimeout(cinco,2000)
+    setTimeout(cinco, 2000)
 
 }
 
 function cinco() {
-    console.log("cinco")   
-} 
+    console.log("cinco")
+
+}
 
 
-setTimeout(() => uno(dos),5000)
+setTimeout(() => uno(dos), 5000)
 
 //calback hell
-setTimeout(() => uno(
-    () => dos(
-        () => tres(
-            () => cuatro(
-                () => cinco(),)))), 3000);
+setTimeout(() => uno(() => dos(() => tres(() => cuatro(() => cinco(),)))), 3000);
 
 
 const nombre = function () {
@@ -47,14 +44,4 @@ const persona = () => console.log("Barbara")
 persona();
 
 () => console.log()
-
-
-
-
-
-
-
-
-
-
 

@@ -1,37 +1,39 @@
 
-const url = "https://api.nasa.gov/planetary/apod?api_key=Md6ZhB8e1s2GDDDn6dEI4WialPr963Fl4DVh6PcA&count=15" 
- 
+const url = "https://api.nasa.gov/planetary/apod?api_key=Md6ZhB8e1s2GDDDn6dEI4WialPr963Fl4DVh6PcA&count=15"
 
-async function listaImagenes() {
+fetch(url).
 
-    try{
-        let fetchImagen = await fetch(url)
-        let datosImagenes = await fetchImagen.json()
 
-        console.log(datosImagenes)
+// async function listaImagenes() {
 
-        const card = document.querySelector("[data-ul]")
+//     try {
+//         let fetchImagen = await fetch(url)
+//         let datosImagenes = await fetchImagen.json()
 
-        datosImagenes.forEach( elemento => {
+//         console.log(datosImagenes)
 
-            const contenido =
-            `<li class="card">
-                <img class="card__image" src="${elemento.url}" alt="imagen">
-                <h3 class="card__title">${elemento.title}</h3>
-            </li>
-            `
+//         const card = document.querySelector("[data-ul]")
 
-            card.innerHTML = card.innerHTML + contenido
-        })
-        
-    }
-    catch(error){
-        console.log(error)
-    }
-}
+//         datosImagenes.forEach(elemento => {
 
-listaImagenes()
+//             const contenido =
+//                 `<li class="card">
+//                 <img class="card__image" src="${elemento.url}" alt="imagen">
+//                 <h3 class="card__title">${elemento.title}</h3>
+//             </li>
+//             `
 
+//             card.innerHTML = card.innerHTML + contenido
+//         })
+
+//     }
+//     catch (error) {
+//         console.log(error)
+//     }
+// }
+
+// listaImagenes()
+// // // // // // // // // // // // // // // // // // // // // // // // // //
 
 // then y catch
 /* function listaImagenes(){
@@ -55,3 +57,4 @@ listaImagenes()
 }
 
 listaImagenes() */
+
